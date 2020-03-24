@@ -1,4 +1,4 @@
-Google Map React Demo
+Community Watch
 =====================
 
 ### Libraries:
