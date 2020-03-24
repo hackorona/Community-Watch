@@ -1,5 +1,7 @@
 import { createStore, combineReducers, compose } from 'redux';
+import { reducer as formReducer } from "redux-form";
 import MapReducer from './MapReducer';
+import booksReducer from "./books-reducer";
 
 // Enable redux dev tool
 const middleware = compose(
@@ -17,6 +19,8 @@ const persistState = !sessionStorage.getItem('br-codingexamps')
 const store = createStore(
   combineReducers({
     map: MapReducer,
+    books: booksReducer,
+  	form: formReducer
   }),
   persistState,
   middleware
